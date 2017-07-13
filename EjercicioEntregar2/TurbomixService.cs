@@ -10,6 +10,7 @@ namespace EjercicioEntregar2
     {
         public IBascula Bascula { get; set; }
         public ICocina Cocina { get; set; }
+        public IRecetaRepository Recetario { get; set; }
 
         public TurbomixService(IBascula _Bascula, ICocina _Cocina)
         {
@@ -54,6 +55,12 @@ namespace EjercicioEntregar2
             }
             return PlatoFinal;
 
+        }
+
+        public void GuardarReceta(Alimento mAlimento1, Alimento mAlimento2)
+        {
+            Receta Receta1 = new Receta(mAlimento1,mAlimento2);
+            Recetario.CreateReceta(Receta1);
         }
 
         private static bool MismoNombreAlimentosConReceta(Alimento mAlimento1, Alimento mAlimento2, Receta Receta)
