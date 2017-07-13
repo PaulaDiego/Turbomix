@@ -63,7 +63,7 @@ namespace UnitTestProject1
             mAlimentoReceta2.Peso = 5F;
 
             mockBasculaService.Verify(bascula => bascula.Pesar(It.IsAny<Alimento>()), Times.AtLeast(2));
-            mockCocinaService.Verify(cocina => cocina.Calentar(It.IsAny<Alimento>()), It.IsAny<Alimento>());
+            mockCocinaService.Verify(cocina => cocina.Calentar(It.IsAny<Alimento>(), It.IsAny<Alimento>()), Times.AtLeast(1));
             Plato mPlato = new Plato(mAlimentoReceta1, mAlimentoReceta2);
        
             Assert.AreEqual(mPlato, resultado);
