@@ -15,5 +15,24 @@ namespace EjercicioEntregar2
             ListaRecetas.Add(_Receta);
         }
 
+        public Receta Lee(String _Nombre)
+        {
+            return new Receta(new Alimento(), new Alimento());
+        }
+
+        public IList<Receta> Lista()
+        {
+            return ListaRecetas;
+        }
+
+        public void Update(String _Nombre,String _NuevoNombre)
+        {
+            
+        }
+
+        public void Delete(String _Nombre)
+        {
+
+        }
     }
 }
