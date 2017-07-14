@@ -22,7 +22,7 @@ namespace UnitTestProject1
             IBasculaService basculaService = new BasculaService();
             ICocinaService cocinaService = new CocinaService();
 
-            sut = new TurbomixService(basculaService, cocinaService);
+            sut = new TurbomixService(basculaService, cocinaService,null);
             mAlimento1 = new Alimento();
             mAlimento1.Nombre = "Curry";
             mAlimento1.Peso = 1.5F;

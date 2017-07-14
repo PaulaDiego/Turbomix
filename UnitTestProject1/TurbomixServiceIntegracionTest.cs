@@ -66,10 +66,10 @@ namespace UnitTestProject1
             Assert.AreEqual(mPlato, resultado);
         }
 
-        [TestMethod]
-        public void TestGuardarReceta()
-        {
-            sut.GuardarReceta(mAlimento1,mAlimento2);
-        }
+        //[TestMethod]
+        //public void TestGuardarReceta()
+        //{
+        //    sut.GuardarReceta(mAlimento1,mAlimento2);
+        //}
     }
 }

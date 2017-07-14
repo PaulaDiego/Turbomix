@@ -2,6 +2,6 @@
 {
     public interface IRecetaRepository
     {
-        void CreateReceta(Receta _Receta);
+        void Create(Receta _Receta);
     }
 }

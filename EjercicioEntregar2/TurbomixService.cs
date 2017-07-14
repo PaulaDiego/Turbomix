@@ -58,12 +58,7 @@ namespace EjercicioEntregar2
 
         }
 
-        public void GuardarReceta(Alimento mAlimento1, Alimento mAlimento2)
-        {
-            Receta Receta1 = new Receta(mAlimento1,mAlimento2);
-            Recetario.CreateReceta(Receta1);
-        }
-
+        
         private static bool MismoNombreAlimentosConReceta(Alimento mAlimento1, Alimento mAlimento2, Receta Receta)
         {
             return mAlimento1.Nombre.Equals(Receta.Alimento1.Nombre)

@@ -11,7 +11,10 @@ namespace EjercicioEntregar2
         public Alimento Alimento1;
         public Alimento Alimento2;
         
+        public Receta()
+        {
 
+        }
         public Receta(Alimento _Alimento1, Alimento _Alimento2)
         {
             this.Alimento1 = _Alimento1;
