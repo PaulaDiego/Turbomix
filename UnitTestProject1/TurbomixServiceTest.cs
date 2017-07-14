@@ -19,8 +19,8 @@ namespace UnitTestProject1
         [TestInitialize]
         public void Init()
         {
-            IBascula basculaService = new BasculaService();
-            ICocina cocinaService = new CocinaService();
+            IBasculaService basculaService = new BasculaService();
+            ICocinaService cocinaService = new CocinaService();
 
             sut = new TurbomixService(basculaService, cocinaService);
             mAlimento1 = new Alimento();
@@ -46,8 +46,8 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestPrepararPlato()
         {
-            var mockBasculaService = new Mock<IBascula>();
-            var mockCocinaService = new Mock<ICocina>();
+            var mockBasculaService = new Mock<IBasculaService>();
+            var mockCocinaService = new Mock<ICocinaService>();
             mockBasculaService.Setup( bascula => bascula.Pesar(It.IsAny<Alimento>()))
                 .Returns((Alimento p) => p.Peso);
 

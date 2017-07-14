@@ -8,8 +8,8 @@ namespace EjercicioEntregar2
 {
     public class RecetaRepository : IRecetaRepository
     {
-        public static List<Receta> ListaRecetas;
-        //CRUD
+        public static IList<Receta> ListaRecetas = new List<Receta>;
+
         public void CreateReceta(Receta _Receta)
         {
             ListaRecetas.Add(_Receta);

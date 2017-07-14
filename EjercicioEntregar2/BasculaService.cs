@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EjercicioEntregar2
 {
-    public class BasculaService : IBascula
+    public class BasculaService : IBasculaService
     {
         public float Pesar(Alimento mAlimento)
         {

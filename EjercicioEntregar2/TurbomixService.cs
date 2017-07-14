@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 
 namespace EjercicioEntregar2
 {
-    public class TurbomixService
+    public class TurbomixService : ITurbomixService
     {
-        public IBascula Bascula { get; set; }
-        public ICocina Cocina { get; set; }
+        public IBasculaService Bascula { get; set; }
+        public ICocinaService Cocina { get; set; }
         public IRecetaRepository Recetario { get; set; }
 
-        public TurbomixService(IBascula _Bascula, ICocina _Cocina)
+        public TurbomixService(IBasculaService _Bascula, ICocinaService _Cocina, IRecetaRepository _Recetario)
         {
             this.Bascula = _Bascula;
             this.Cocina = _Cocina;
+            this.Recetario = _Recetario;
         }
 
         public Plato PrepararPlato(Alimento mAlimento1, Alimento mAlimento2)

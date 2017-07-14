@@ -19,10 +19,11 @@ namespace UnitTestProject1
         [TestInitialize]
         public void Init()
         {
-            IBascula basculaService = new BasculaService();
-            ICocina cocinaService = new CocinaService();
+            IBasculaService basculaService = new BasculaService();
+            ICocinaService cocinaService = new CocinaService();
+            IRecetaRepository Recetario = new RecetaRepository();
 
-            sut = new TurbomixService(basculaService, cocinaService);
+            sut = new TurbomixService(basculaService, cocinaService,null);
             mAlimento1 = new Alimento();
             mAlimento1.Nombre = "Curry";
             mAlimento1.Peso = 1.5F;
@@ -68,7 +69,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestGuardarReceta()
         {
-            sut.GuardarReceta();
+            sut.GuardarReceta(mAlimento1,mAlimento2);
         }
     }
 }
