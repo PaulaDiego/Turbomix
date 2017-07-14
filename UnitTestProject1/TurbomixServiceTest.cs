@@ -48,6 +48,7 @@ namespace UnitTestProject1
         {
             var mockBasculaService = new Mock<IBasculaService>();
             var mockCocinaService = new Mock<ICocinaService>();
+            
             mockBasculaService.Setup( bascula => bascula.Pesar(It.IsAny<Alimento>()))
                 .Returns((Alimento p) => p.Peso);
 
@@ -56,13 +57,13 @@ namespace UnitTestProject1
 
             mockCocinaService.Setup(cocina => cocina.Calentar(It.IsAny<Alimento>(), It.IsAny<Alimento>()))
                 .Callback((Alimento p1, Alimento p2) => { p1.Calentado = true; p2.Calentado = true; });
-
+            sut = new TurbomixService(mockBasculaService.Object, mockCocinaService.Object, null);
             Plato resultado = sut.PrepararPlato(mAlimento1, mAlimento2);
 
             mAlimentoReceta1.Peso = 1.5F;
             mAlimentoReceta2.Peso = 5F;
 
-            mockBasculaService.Verify(bascula => bascula.Pesar(It.IsAny<Alimento>()), Times.AtLeast(2));
+            mockBasculaService.Verify(bascula => bascula.Pesar(It.IsAny<Alimento>()), Times.AtLeast(1));
             mockCocinaService.Verify(cocina => cocina.Calentar(It.IsAny<Alimento>(), It.IsAny<Alimento>()), Times.AtLeast(1));
             Plato mPlato = new Plato(mAlimentoReceta1, mAlimentoReceta2);
        
