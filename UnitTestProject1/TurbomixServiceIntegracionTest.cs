@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using EjercicioEntregar2;
-
+using Microsoft.Practices.Unity;
 
 namespace UnitTestProject1
 {
@@ -16,12 +16,16 @@ namespace UnitTestProject1
         private Alimento mAlimentoReceta1;
         private Alimento mAlimentoReceta2;
 
+        private IUnityContainer container;
+        private IBasculaService basculaService;
+        private ICocinaService cocinaService;
+        private IRecetaRepository Recetario;
         [TestInitialize]
         public void Init()
         {
-            IBasculaService basculaService = new BasculaService();
-            ICocinaService cocinaService = new CocinaService();
-            IRecetaRepository Recetario = new RecetaRepository();
+            basculaService = container.Resolve<IBasculaService>();
+            cocinaService = container.Resolve<ICocinaService>();
+            Recetario = container.Resolve<IRecetaRepository>();
 
             sut = new TurbomixService(basculaService, cocinaService,null);
             mAlimento1 = new Alimento();
