@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace EjercicioEntregar2
+namespace Turbomix
 {
     public interface IRecetaService
     {

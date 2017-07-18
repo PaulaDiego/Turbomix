@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EjercicioEntregar2
+namespace Turbomix
 {
     public class Plato
     {

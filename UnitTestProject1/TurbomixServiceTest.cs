@@ -1,9 +1,9 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using EjercicioEntregar2;
+using Turbomix;
 using Moq;
 
-namespace UnitTestProject1
+namespace TurbomixTest
 {
     [TestClass]
     public class TurbomixServiceTest

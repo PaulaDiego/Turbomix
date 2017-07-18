@@ -1,10 +1,10 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using EjercicioEntregar2;
+using Turbomix;
 using Moq;
 using Microsoft.Practices.Unity;
 
-namespace UnitTestProject1
+namespace TurbomixTest
 {
     [TestClass]
     public class RecetaServiceIntegrationTest

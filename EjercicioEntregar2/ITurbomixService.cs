@@ -1,4 +1,4 @@
-﻿namespace EjercicioEntregar2
+﻿namespace Turbomix
 {
     public interface ITurbomixService
     {

@@ -1,8 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using EjercicioEntregar2;
+using Turbomix;
 
-namespace UnitTestProject1
+namespace TurbomixTest
 {
     [TestClass]
     public class CocinaServiceTest
