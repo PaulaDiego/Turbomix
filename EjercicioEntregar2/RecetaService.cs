@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Turbomix.CategoriasReceta;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,14 +10,23 @@ namespace Turbomix
     public class RecetaService : IRecetaService
     {
         private IRecetaRepository Recetario;
+        private ICategoriaRecetaService Categorias;
 
-        public RecetaService(IRecetaRepository _Recetario)
+        public RecetaService(IRecetaRepository _Recetario, ICategoriaRecetaService _Categorias)
         {
             this.Recetario = _Recetario;
+            this.Categorias = _Categorias;
         }
         public void Guardar(Receta _Receta)
         {
-            Recetario.Create(_Receta);
+            if (Categorias.Lee(_Receta.Categoria.Nombre) != null)
+            {
+                Recetario.Create(_Receta);
+            }else
+            {
+                throw new Exception();
+            }
+            
         }
 
         public Receta Lee(String _Nombre)

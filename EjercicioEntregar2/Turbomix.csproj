@@ -42,6 +42,11 @@
   <ItemGroup>
     <Compile Include="Alimento.cs" />
     <Compile Include="BasculaService.cs" />
+    <Compile Include="CategoriasReceta\CategoriaReceta.cs" />
+    <Compile Include="CategoriasReceta\CategoriaRecetaRepository.cs" />
+    <Compile Include="CategoriasReceta\CategoriaRecetaService.cs" />
+    <Compile Include="CategoriasReceta\ICategoriaRecetaRepository.cs" />
+    <Compile Include="CategoriasReceta\ICategoriaRecetaService.cs" />
     <Compile Include="CocinaService.cs" />
     <Compile Include="IBasculaService.cs" />
     <Compile Include="ICocinaService.cs" />

@@ -12,6 +12,7 @@ namespace TurbomixTest
         private IUnityContainer container;
         private IRecetaRepository RecetaRepository;
         private IRecetaService sut;
+        private ICategoriaRecetaService CategoriaRecetaService;
       [TestInitialize]
         public void Init() {
             container = new UnityContainer();
@@ -23,7 +24,7 @@ namespace TurbomixTest
         [TestMethod]
         public void TestGuardar()
         {
-            Receta receta = new Receta(null, null);
+            Receta receta = new Receta(null, null,null);
             
             
             sut.Guardar(receta);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Turbomix.CategoriasReceta;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,8 @@ namespace Turbomix
     {
         public Alimento Alimento1;
         public Alimento Alimento2;
-        
+        public CategoriaReceta Categoria;
+
         public Receta()
         {
 
@@ -19,7 +21,12 @@ namespace Turbomix
         {
             this.Alimento1 = _Alimento1;
             this.Alimento2 = _Alimento2;
-            
+        }
+        public Receta(Alimento _Alimento1, Alimento _Alimento2,CategoriaReceta _Categoria)
+        {
+            this.Alimento1 = _Alimento1;
+            this.Alimento2 = _Alimento2;
+            this.Categoria = _Categoria;
         }
     }
     
